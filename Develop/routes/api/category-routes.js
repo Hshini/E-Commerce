@@ -24,11 +24,15 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
     console.log(req.params.id)
-  Category.findByPk(req.params.id)
+  Category.findByPk(req.params.id,{
+    include:[{
+      model:Product
+    }]
+   })
   .then((answer)=>{
     res.json(answer)
   })
-  .catch((err)=> {
+    .catch((err)=> {
     console.log(err)
     res.status(500).json(err)
   })
@@ -38,23 +42,43 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
   // create a new category
-  const category = req.body
-
-  Category.create(category)
-  .then(newCategory => {
-    res.send(newCategory)
-  }).catch (err => {
-    console.log(err);
+  Category.create(req.body)
+  .then((answer)=>{
+    res.json(" category  Created")
   })
-
+  .catch((err)=>{
+    console.log(err)
+  })
 });
 
 router.put('/:id', (req, res) => {
   // update a category by its `id` value
+  Category.update ({
+    where: {
+      id: req.params.id
+    }
+  })
+  .then((answer) => {
+    res.json("User updated")
+  })
+  .catch((err) => {
+    console.log(err)
+  })
 });
 
 router.delete('/:id', (req, res) => {
   // delete a category by its `id` value
+ Category.destroy({
+    where: {
+      id: req.params.id
+    }
+  })
+  .then((answer) => {
+    res.json("User Deleted")
+  })
+  .catch((err) => {
+    console.log(err)
+  })
 });
 
 module.exports = router;
