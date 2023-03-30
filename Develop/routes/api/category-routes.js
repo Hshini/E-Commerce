@@ -44,7 +44,7 @@ router.post('/', (req, res) => {
   // create a new category
   Category.create(req.body)
   .then((answer)=>{
-    res.json(" category  Created")
+    res.json(answer)
   })
   .catch((err)=>{
     console.log(err)
@@ -53,13 +53,13 @@ router.post('/', (req, res) => {
 
 router.put('/:id', (req, res) => {
   // update a category by its `id` value
-  Category.update ({
+  Category.update (req.body,{
     where: {
       id: req.params.id
     }
   })
   .then((answer) => {
-    res.json("User updated")
+    res.json(answer)
   })
   .catch((err) => {
     console.log(err)
@@ -74,7 +74,7 @@ router.delete('/:id', (req, res) => {
     }
   })
   .then((answer) => {
-    res.json("User Deleted")
+    res.json(answer)
   })
   .catch((err) => {
     console.log(err)
