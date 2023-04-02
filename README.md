@@ -2,7 +2,9 @@
 
 
 ## Description
-
+This app uses sequelize orm to create the database<br>
+E-commerce  app will ask you questions,
+which will help to create Database
 ## Installation 
 This app require <br>
 [ Express package](https://www.npmjs.com/package/mysql2)<br>
