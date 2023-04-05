@@ -14,6 +14,7 @@ This app require <br>
 
 ## Usage 
 Clone the  repo in your pc.
+[Video-Guide](https://watch.screencastify.com/v/rmX1DY920IKDKXxXTXmo)<br>
 
 ## License
 MIT
