@@ -13,7 +13,7 @@ This app require <br>
 [dotenv package](https://www.npmjs.com/package/dotenv)<br>
 
 ## Usage 
-Clone the  repo in your pc.
+Clone the  repo in your pc.<br>
 [Video-Guide](https://watch.screencastify.com/v/rmX1DY920IKDKXxXTXmo)<br>
 
 ## License
