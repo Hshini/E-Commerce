@@ -15,6 +15,7 @@ This app require <br>
 ## Usage 
 Clone the  repo in your pc.<br>
 [Video-Guide](https://watch.screencastify.com/v/rmX1DY920IKDKXxXTXmo)<br>
+![E Commerce](./Assets/Images/Screen.png)
 
 ## License
 MIT
